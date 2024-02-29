@@ -39,6 +39,7 @@
         <button onclick="addFront()">Add front</button>
         <button onclick="remove()">Remove</button>
 
+
 <script>
 	function makeNewDiv(){
 		
@@ -76,6 +77,10 @@
             var container = document.querySelector(".flex-container");
             container.insertBefore(newElement, container.firstChild);
         }
+        function swapElements() {
+		const divListItems = document.getElementsByClassName("divlist");
+			var i1 = Math.floor(Math.random() * divListItems.length);
+			var i2 = Math.floor(Math.random() * divListItems.length);
 
 			
 			while (i1 === i2) {
