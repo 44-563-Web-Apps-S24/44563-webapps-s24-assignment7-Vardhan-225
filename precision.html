@@ -36,11 +36,15 @@
     }
 
     function startTime() {
-      for (let i=0; i<4; i++) {
+        
+      count = Math.floor(Math.random() * 9) + 2;
+
+      for (let i = count; i >= 0; i--) {
         setTimeout(function() {
-          document.getElementById("counter").innerHTML = i
-        } , (1000 * (4 - i)))
+          document.getElementById("counter").innerHTML = i;
+        }, (1000 * (count - i)));
       }
+
       setTimeout(function() {
         if (stopTime == undefined) {
           document.getElementById("target").innerHTML = "Too Slow"
